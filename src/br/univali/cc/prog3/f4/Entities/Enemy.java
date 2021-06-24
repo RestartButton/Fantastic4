@@ -1,22 +1,15 @@
 package br.univali.cc.prog3.f4.Entities;
 
-import java.awt.Graphics;
+public abstract class Enemy extends Entity {
+	
+	protected double life;
 
-public class Enemy extends Entity {
-
-	public Enemy(int x, int y, int w, int h) {
+	public Enemy(int x, int y, int w, int h, double life) 
+	{
 		super(x, y, w, h, 0.4);
 		
+		this.life = life;
 	}
 	
-	public void update()
-	{
-		
-	}
-	
-	public void render(Graphics g)
-	{
-		
-	}
-
+	protected abstract Enemy clone(int x, int y);
 }

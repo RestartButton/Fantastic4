@@ -8,10 +8,10 @@ import br.univali.cc.prog3.f4.Main.Game;
 public class Bullet extends Entity {
 
 	private int direction;
-	private int life = 30;
+	private int life = 32;
 	
-	public Bullet(int x, int y, int w, int h, int d) {
-		super(x, y, w, h, 4);
+	public Bullet(int x, int y, int d) {
+		super(x, y, 3, 3, 4);
 		this.direction = d;
 	}
 
@@ -29,6 +29,6 @@ public class Bullet extends Entity {
 	public void render(Graphics g)
 	{
 		g.setColor(Color.yellow);
-		g.fillOval(this.posX, this.posY, width, height);
+		g.fillOval(posX, posY, width, height);
 	}
 }
